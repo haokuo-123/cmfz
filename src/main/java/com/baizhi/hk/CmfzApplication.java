@@ -10,7 +10,7 @@ public class CmfzApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CmfzApplication.class, args);
-        //c打收到萨达
+        //c发顺丰
     }
 
 }

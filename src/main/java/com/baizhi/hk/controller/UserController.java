@@ -103,5 +103,15 @@ public class UserController {
         return hashMap;
     }
 
+    @RequestMapping("chart")
+    public void chart(String message) {
+               // GoEasy goEasy = new GoEasy( "http://rest-hangzhou.goeasy.io", "BC-69489dfd130b4b8195d4b1a675650c13");
+                GoEasy goEasy = new GoEasy( "http://rest-hangzhou.goeasy.io", "BC-e16fb777a6b2422fa18ac579f346cf48");
+                String s = JSONUtils.toJSONString(message);
+                goEasy.publish("cmfz", s);
+
+
+    }
+
 
 }

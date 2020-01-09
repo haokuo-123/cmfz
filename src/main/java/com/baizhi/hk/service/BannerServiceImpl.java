@@ -1,5 +1,6 @@
 package com.baizhi.hk.service;
 
+import com.baizhi.hk.aspect.AddOrSelectCache;
 import com.baizhi.hk.aspect.Log;
 import com.baizhi.hk.dao.BannerDao;
 import com.baizhi.hk.entity.Banner;
@@ -19,6 +20,7 @@ public class BannerServiceImpl implements BannerService {
     private BannerDao bannerDao;
 
     @Override
+    @AddOrSelectCache
     public Map<String, Object> findAll(Integer page, Integer rows) {
         Banner banner = new Banner();
         RowBounds rowBounds = new RowBounds((page - 1) * rows, rows);
